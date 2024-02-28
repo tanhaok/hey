@@ -7,6 +7,7 @@ package cmd
 import (
 	"context"
 	"fmt"
+	"github.com/fatih/color"
 	"github.com/google/generative-ai-go/genai"
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
@@ -67,7 +68,9 @@ func chatWithGemini(cmd *cobra.Command, args []string) {
 			if err != nil {
 				log.Fatal(err)
 			}
+			color.Set(color.FgHiCyan)
 			fmt.Println(resp.Candidates[0].Content.Parts[0])
+			color.Unset()
 		}
 
 	}
