@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 NAME HERE HAROLD HASON
+Copyright © 2024 HAROLD HASON
 */
 
 package cmd
