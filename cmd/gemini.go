@@ -18,7 +18,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const KEY = "GEMINI_API_KEY"
+const GeminiKey = "GEMINI_SECRET_KEY"
 
 // geminiCmd represents the gemini command
 var geminiCmd = &cobra.Command{
@@ -37,7 +37,7 @@ to quickly create a Cobra application.`,
 }
 
 func chatWithGemini(cmd *cobra.Command, args []string) {
-	apiValue := os.Getenv(KEY)
+	apiValue := os.Getenv(GeminiKey)
 
 	if apiValue == "" {
 		fmt.Println("API key for gemini does not exit.")
